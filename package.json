@@ -1,34 +1,33 @@
 {
-  "name": "next-blog",
-  "version": "1.0.0",
+  "name": "todo-app",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "typeorm": "typeorm-ts-node-commonjs",
-    "migrate": "npm run typeorm migration:run -- -d ./src/lib/data-source.ts",
-    "postbuild": "npm run migrate"
+    "migration:generate": "npm run typeorm -- migration:generate",
+    "migration:run": "npm run typeorm -- migration:run",
+    "migration:revert": "npm run typeorm -- migration:revert"
   },
   "dependencies": {
     "next": "14.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typeorm": "0.3.20",
-    "sqlite3": "5.1.6",
     "tailwindcss": "3.4.0",
-    "autoprefixer": "10.4.19",
-    "postcss": "8.4.38",
-    "date-fns": "3.3.1",
-    "marked": "12.0.0"
+    "autoprefixer": "10.4.16",
+    "postcss": "8.4.32",
+    "typeorm": "0.3.20",
+    "reflect-metadata": "0.2.0",
+    "sqlite3": "5.1.6"
   },
   "devDependencies": {
-    "typescript": "5.4.5",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
-    "@types/marked": "5.0.0",
-    "ts-node": "10.9.2",
-    "reflect-metadata": "0.2.1"
+    "@types/node": "20.11.24",
+    "@types/react": "18.2.61",
+    "@types/react-dom": "18.2.19",
+    "@types/sqlite3": "3.1.8",
+    "typescript": "5.3.3",
+    "ts-node": "10.9.2"
   }
 }
